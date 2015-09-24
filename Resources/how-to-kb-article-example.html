@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creating a button counter</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container panel panel-default">
+		<div class="panel-body">
+			<div class="page-header">
+				<h1 class="container"><strong>Creating a button counter</strong></h1>
+			</div>
+			<div class="container" style="color: #666">
+				<div class="panel panel-default" style="width: 300px;">
+					<div class="panel-heading">
+						<div class="panel-title">
+							<strong>Article information</strong>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-6"><em>Article relates to</em></div>
+							<div class="col-sm-6">JavaScript</div>
+							<div class="col-sm-6"></div>
+							<div class="col-sm-6">jQuery</div>							
+						</div>
+						<br/>
+						<div class="row">
+							<div class="col-sm-6"><em>Created by</em></div>
+							<div class="col-sm-6">Telerik Academy</div>
+						</div>
+						<br/>
+						<div class="row">
+							<div class="col-sm-6"><em>Last modified</em></div>
+							<div class="col-sm-6">Sept 18, 2015</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3><strong>HOW-TO</strong></h3>
+					<p>
+						Create a button showing the number of times it has been clicked.
+					</p>
+				</div>
+				<div>
+					<h3><strong>DESCRIPTION</strong></h3>
+					<p>
+						Counting the number of button clicks using JavaScript and jQuery can be easily implemented
+						using the instructions below:
+						<br/>
+						<small><em>(Note: You are free to use your favorite text editor)</em></small>
+					</p>
+				</div>
+				<div>
+					<h3><strong>SOLUTION</strong></h3>
+					<p>How to create a button counter for our project using jQuery:</p>
+					<p><strong>Getting started</strong>: For this demo we are going to use the jQuery CDN.
+						Insert the following line at the bottom of the <code>body</code>
+						tag:
+						<br/>
+						<p><code>&lt;script src="https://code.jquery.com/jquery-2.1.4.min.js"&gt;&lt;/script&gt;</code></p>
+						</p>
+					<ol>
+						<li>Create a blank html page.</li>
+						<li>Create a button with an <code>id</code> attribute set to any value:
+						In our case let it be "button-counter":<br/>
+						<p><code>&lt;button id="button-counter"&gt;&lt;/button&gt;</code></p></li>
+						<li>Open a script tag OR create a blank JavaScript file
+							and reference it in the page, after the jQuery reference,<br/>
+							and create a variable that will represent the counter:
+							<small><em><br/>(Note: You might want to consider storing this variable
+								in your database or web storage so that its value can be used even after the browser
+								has been closed,<br/>since in this case it will be reset back to zero.)</small>
+							</em></small><br/>
+							<p><code>var counter = 0;</code></p>
+						</li>
+						<li>Select the button using jQuery and set its text to the initial value of the counter variable:
+							<p><code>var buttonCounter = $('#button-counter');</code><br/><code>buttonCounter.text(counter);</code></p>
+						</li>
+						<li>Attach a click event to the button increasing the value of the counter and setting the new value
+							as the button's text:
+							<p><code>buttonCounter.on('click', function() {</code><br/>
+							   <code>&nbsp;&nbsp;&nbsp;&nbsp;counter += 1;</code><br/>
+			                   <code>&nbsp;&nbsp;&nbsp;&nbsp;buttonCounter.text(counter);</code><br/>
+							   <code>});</code></p>
+						</li>
+					</ol>
+				</div>
+				<div>
+					<h3><strong>SOURCE CODE</strong></h3>
+					<a href="http://dojo.telerik.com/OKEWo">Click here to see the entire source code</a>
+				</div>
+				<div>
+					<h3><strong>USEFUL RESOURCES</strong></h3>
+					<a href="http://api.jquery.com/on/">jQuery event handlers</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
